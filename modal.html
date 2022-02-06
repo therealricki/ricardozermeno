@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ricardo Zermeno - Activity 7</title>
+    <link rel="stylesheet" href="templates/modal.css" type="text/css">
+  </head>
+  <body>
+    <h1 class="title">Modal Window</h1>
+    <form action="templates/checkout.html" method="post">
+
+    <a href="#modalwindow" class="open">Click Here</a>
+    <!-- NOTE: Modal Window -->
+    <div class="modalback" id="modalwindow">
+      <div class="modalfront">
+        <a href="#" class="close"><span style='font-size:20px;'>&#10007;</span></a>
+        <div class="imgcont">
+          <img src="templates/lotion.jpeg" alt="Lavender Rose" title="Lavender Rose Lotion">
+        </div>
+        <div class="info">
+          <p id="productName">Lavender Rose</p>
+          <p>Gentle Foaming Hand Soap</p>
+          <p>A soothing floral mix of lavender, soft rose petals and musk in our luxurious foaming soap.</p>
+          <span class="wasprice">Was $12.50 </span><span class="nowprice">Now $3.50</span>
+          <hr>
+          <input type="submit" class="add" value="ADD TO BAG" onclick="passvalue();"></input>
+        </div>
+      </div>
+    </div>
+    <!-- NOTE: End of Modal Window -->
+  </form>
+    <script type="text/javascript">
+      function passvalue(){
+        let prdName = 'Lavender Rose';
+        let price1 = 3.50
+        localStorage.setItem('product_name',prdName);
+        localStorage.setItem('price_',price1);
+        return false;
+      }
+    </script>
+  </body>
+</html>
